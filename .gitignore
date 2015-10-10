@@ -1,0 +1,8 @@
+doc/
+lib/
+obj/
+demos/circle_demo
+demos/rectangle_demo
+tests/circle_tests
+tests/rectangle_tests
+.compiler_flags
