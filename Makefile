@@ -321,6 +321,8 @@ clobber:
 	rm -f $(demos)
 	rm -f $(tests)
 	rm -f $(library_header)
+	rm -rf $(demo_dir)/*dSYM
+	rm -rf $(test_dir)/*dSYM
 	rm -f tests/tests.log
 	rm -f .compiler_flags
 
