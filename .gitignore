@@ -1,8 +1,10 @@
 doc/
 lib/
 obj/
+src/shapes.h
 demos/circle_demo
 demos/rectangle_demo
 tests/circle_tests
 tests/rectangle_tests
+*.dSYM
 .compiler_flags
