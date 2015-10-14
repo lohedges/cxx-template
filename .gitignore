@@ -6,5 +6,6 @@ demos/circle_demo
 demos/rectangle_demo
 tests/circle_tests
 tests/rectangle_tests
+tests/tests.log
 *.dSYM
 .compiler_flags
