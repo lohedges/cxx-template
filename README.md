@@ -149,3 +149,10 @@ $ ./class_template ClassName path
 ```
 
 will move the files to the directory specified by `path`.
+
+Note that the template files use tabs. If you prefer to use spaces (as I do)
+then you can fix this afterwards in your editor, e.g. in Vim you can run
+
+```bash
+:retab
+```
