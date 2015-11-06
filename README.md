@@ -100,7 +100,7 @@ $ export LDFLAGS='-L/opt/local/lib'
 ## Tips
 * To set a different installation path run
 ```bash
-$ make iPREFIX=path nstall
+$ make PREFIX=path install
 ```
 * Additional CXXFLAGS can be passed using OPTFLAGS, e.g.
 ```bash
