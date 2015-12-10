@@ -37,6 +37,11 @@ int main(int argc, char** argv)
     std::cout << "Git commit: " <<  COMMIT << "\n";
 #endif
 
+    // Print git branch info, if present.
+#ifdef BRANCH
+    std::cout << "Git branch: " <<  BRANCH << "\n";
+#endif
+
     // Print some details for rec1.
     std::cout << "Rec 1:\t"
               << "area = " << rec1.area()
