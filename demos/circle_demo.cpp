@@ -34,12 +34,12 @@ int main(int argc, char** argv)
 
     // Print git commit info, if present.
 #ifdef COMMIT
-    std::cout << "Git commit: " <<  COMMIT << "\n";
+    std::cout << "Git commit: " << COMMIT << "\n";
 #endif
 
     // Print git branch info, if present.
 #ifdef BRANCH
-    std::cout << "Git branch: " <<  BRANCH << "\n";
+    std::cout << "Git branch: " << BRANCH << "\n";
 #endif
 
     // Print some details for circ1.
