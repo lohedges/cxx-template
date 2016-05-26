@@ -77,8 +77,8 @@ In a rapidly evolving codebase it is helpful that the library knows the version 
 the source code from which it was compiled. This allows any bugs to be traced to
 a specific version of the code. As such, an abbreviated version of the git commit
 hash is passed as a command-line `#define` directive. When using the library the
-user can access version information through the`COMMIT` constant. The included
-demo codes show examples of how to print the commit information.
+user can access version information through the `COMMIT` and `BRANCH` constants.
+The included demo codes show examples of how to print version control information.
 
 ### Clean ouput
 By default make's rather verbose output is entirely suppressed using the
