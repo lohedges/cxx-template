@@ -52,7 +52,7 @@ int main(int argc, char** argv)
               << "area = " << circ2.area()
               << ", circumference = " << circ2.circumference() << "\n";
 
-    // Totals
+    // Totals.
     std::cout << "Totals:\t"
               << "area = " << circ1.area() + circ2.area()
               << ", circumference = " << circ1.circumference() + circ2.circumference() << "\n";

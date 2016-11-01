@@ -18,7 +18,7 @@ This project was largely inspired by Zed Shaw's [Learn C The Hard Way](http://c.
 ## Usage
 The `src` directory contains header files and source code for the (illustrative,
 but essentially useless) Shapes library which can be compiled using the included
-`Makfile`. To get detailed information regarding usage of the `Makefile` and the
+`Makefile`. To get detailed information regarding usage of the `Makefile` and the
 available targets simply run make on the command-line with no arguments, i.e.
 
 ```bash

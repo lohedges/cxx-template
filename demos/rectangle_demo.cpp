@@ -52,7 +52,7 @@ int main(int argc, char** argv)
               << "area = " << rec2.area()
               << ", perimeter = " << rec2.perimeter() << "\n";
 
-    // Totals
+    // Totals.
     std::cout << "Totals:\t"
               << "area = " << rec1.area() + rec2.area()
               << ", perimeter = " << rec1.perimeter() + rec2.perimeter() << "\n";
