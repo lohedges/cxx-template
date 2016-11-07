@@ -20,8 +20,6 @@
     along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include <iostream>
-
 #include "Rectangle.h"
 
 Rectangle::Rectangle() : width(5), height(2)

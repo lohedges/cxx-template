@@ -20,8 +20,6 @@
     along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include <iostream>
-
 #ifndef _RECTANGLE_H
 #define _RECTANGLE_H
 
