@@ -22,7 +22,7 @@ but essentially useless) Shapes library which can be compiled using the included
 available targets simply run make on the command-line with no arguments, i.e.
 
 ```bash
-$ make
+make
 ```
 If you would prefer to use [CMake](http://www.cmake.org/), e.g. if you aren't
 using make as your generator, or are compiling on Windows, simply copy the
@@ -30,8 +30,8 @@ contents of the cmake directory into the root of the project folder then run
 cmake, i.e. (assuming that you are currently in the root directory)
 
 ```bash
-$ cp -r cmake/* .
-$ cmake .
+cp -r cmake/* .
+cmake .
 ```
 
 Be warned that if you use make as your cmake generator then the original
@@ -94,21 +94,21 @@ This can be set in your shell profile, on the command-line, or passed directly
 to make as an option. For example, if using MacPorts on OS X
 
 ```bash
-$ export LDFLAGS='-L/opt/local/lib'
+export LDFLAGS='-L/opt/local/lib'
 ```
 
 ## Tips
 * To set a different installation path run
 ```bash
-$ make PREFIX=path install
+make PREFIX=path install
 ```
 * Additional CXXFLAGS can be passed using OPTFLAGS, e.g.
 ```bash
-$ make OPTFLAGS=-Wall devel
+make OPTFLAGS=-Wall devel
 ```
 * Targets can be chained together, e.g.
 ```bash
-$ make release doc test
+make release doc test
 ```
 
 ## Helper scripts
@@ -120,7 +120,7 @@ This script converts all of the necessary files in the repository ready
 for the new library. To set things up for a project called `new`, run
 
 ```bash
-$ ./setup new
+./setup new
 ```
 
 This assumes that the clone git repository is left untouched, i.e. all files
@@ -130,7 +130,7 @@ Alternatively, you can convert files from an `old` project to a `new` one as
 follows
 
 ```bash
-$ ./setup new old
+./setup new old
 ```
 
 ### `class_template`
@@ -138,14 +138,14 @@ Create a new C++ class template, i.e. default header and source files with
 constructor and destructor stubs. To create a new class, run
 
 ```bash
-$ ./class_template ClassName
+./class_template ClassName
 ```
 
 This will generate the files `ClassName.h` and `ClassName.cpp` in the current
 working directory. Alternatively, running
 
 ```bash
-$ ./class_template ClassName path
+./class_template ClassName path
 ```
 
 will move the files to the directory specified by `path`.
