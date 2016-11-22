@@ -4,6 +4,8 @@
 <a href="http://www.gnu.org/licenses/gpl-3.0.html">
 <img width="80" src="http://www.gnu.org/graphics/gplv3-127x51.png"></a></p>
 
+[![Build Status](https://travis-ci.org/lohedges/cxx-template.svg?branch=master)](https://travis-ci.org/lohedges/cxx-template)
+
 ## About
 This repository provides a set of simple templates and helper files for
 managing a small C++ project. A comprehensive `Makefile` is used to build a
