@@ -27,9 +27,9 @@ available targets simply run make on the command-line with no arguments, i.e.
 make
 ```
 If you would prefer to use [CMake](http://www.cmake.org/), e.g. if you aren't
-using make as your generator, or are compiling on Windows, simply copy the
-contents of the cmake directory into the root of the project folder then run
-cmake, i.e. (assuming that you are currently in the root directory)
+using make as your generator, simply copy the contents of the cmake directory
+into the root of the project folder then run cmake, i.e. (assuming that you are
+currently in the root directory)
 
 ```bash
 cp -r cmake/* .
