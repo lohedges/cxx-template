@@ -35,10 +35,6 @@ ENDIF()
 # Print compiler flags.
 MESSAGE(STATUS "Compiler flags: " \"${CMAKE_CXX_FLAGS}\")
 
-# Make sure Boost is installed.
-FIND_PACKAGE(Boost REQUIRED)
-INCLUDE_DIRECTORIES(${INCLUDE_DIRECTORIES} ${Boost_INCLUDE_DIRS})
-
 # Search for Doxygen, add dox subdirectory if found.
 # CMakeLists.txt in dox directory adds documentation dependencies and doc make target.
 FIND_PACKAGE(Doxygen)
