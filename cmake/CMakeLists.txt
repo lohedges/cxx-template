@@ -29,7 +29,7 @@ SET(LIBRARY_OUTPUT_PATH ${SHAPES_BINARY_DIR}/lib CACHE INTERNAL "Single output d
 IF("${CMAKE_BUILD_TYPE}" STREQUAL "Debug")
     SET(CMAKE_CXX_FLAGS "-O0 -g -Wall")
 ELSEIF("${CMAKE_BUILD_TYPE}" STREQUAL "Release")
-    SET(CMAKE_CXX_FLAGS "-O3 -funroll-loops -Wall")
+    SET(CMAKE_CXX_FLAGS "-O3 -DNDEBUG")
 ENDIF()
 
 # Print compiler flags.
