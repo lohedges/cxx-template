@@ -74,11 +74,11 @@ INSTALL(TARGETS shapes
 # Uninstall target
 CONFIGURE_FILE(
     "${CMAKE_CURRENT_SOURCE_DIR}/uninstall.cmake.in"
-    "${CMAKE_CURRENT_BINARY_DIR}/uninstall.cmake"
+    "${CMAKE_CURRENT_SOURCE_DIR}/uninstall.cmake"
     IMMEDIATE @ONLY)
 
 ADD_CUSTOM_TARGET(uninstall
-    COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_BINARY_DIR}/uninstall.cmake)
+    COMMAND ${CMAKE_COMMAND} -P ${CMAKE_SOURCE_DIR}/uninstall.cmake)
 
 # Set the test code path.
 FILE(GLOB TESTS RELATIVE ${SHAPES_SOURCE_DIR} ${SHAPES_SOURCE_DIR}/tests/*.cpp)
