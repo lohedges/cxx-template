@@ -14,6 +14,19 @@ options are: None(CMAKE_CXX_FLAGS or CMAKE_C_FLAGS used) Debug Release
 RelWithDebInfo MinSizeRel." FORCE)
 ENDIF()
 
+# Get Git commit and branch information.
+EXECUTE_PROCESS(COMMAND
+                git describe --abbrev=4 --dirty --always --tags
+                OUTPUT_VARIABLE GIT_COMMIT
+                OUTPUT_STRIP_TRAILING_WHITESPACE
+                )
+EXECUTE_PROCESS(COMMAND
+                git rev-parse --abbrev-ref HEAD
+                OUTPUT_VARIABLE
+                GIT_BRANCH
+                OUTPUT_STRIP_TRAILING_WHITESPACE
+                )
+
 PROJECT(SHAPES)
 
 # Set paths.
@@ -22,9 +35,9 @@ SET(LIBRARY_OUTPUT_PATH ${SHAPES_BINARY_DIR}/lib CACHE INTERNAL "Single output d
 
 # Set the compiler flags.
 IF("${CMAKE_BUILD_TYPE}" STREQUAL "Debug")
-    SET(CMAKE_CXX_FLAGS "-O0 -g -Wall")
+    SET(CMAKE_CXX_FLAGS "-O0 -g -Wall -DCOMMIT=${GIT_COMMIT} -DBRANCH=${GIT_BRANCH}")
 ELSEIF("${CMAKE_BUILD_TYPE}" STREQUAL "Release")
-    SET(CMAKE_CXX_FLAGS "-O3 -DNDEBUG")
+    SET(CMAKE_CXX_FLAGS "-O3 -DNDEBUG -DCOMMIT=${GIT_COMMIT} -DBRANCH=${GIT_BRANCH}")
 ENDIF()
 
 # Output some useful info.
