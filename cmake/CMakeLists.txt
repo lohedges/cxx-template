@@ -15,17 +15,19 @@ RelWithDebInfo MinSizeRel." FORCE)
 ENDIF()
 
 # Get Git commit and branch information.
-EXECUTE_PROCESS(COMMAND
-                git describe --abbrev=4 --dirty --always --tags
-                OUTPUT_VARIABLE GIT_COMMIT
-                OUTPUT_STRIP_TRAILING_WHITESPACE
-                )
-EXECUTE_PROCESS(COMMAND
-                git rev-parse --abbrev-ref HEAD
-                OUTPUT_VARIABLE
-                GIT_BRANCH
-                OUTPUT_STRIP_TRAILING_WHITESPACE
-                )
+EXECUTE_PROCESS(
+    COMMAND
+    git describe --abbrev=4 --dirty --always --tags
+    OUTPUT_VARIABLE GIT_COMMIT
+    OUTPUT_STRIP_TRAILING_WHITESPACE
+)
+EXECUTE_PROCESS(
+    COMMAND
+    git rev-parse --abbrev-ref HEAD
+    OUTPUT_VARIABLE
+    GIT_BRANCH
+    OUTPUT_STRIP_TRAILING_WHITESPACE
+)
 
 PROJECT(SHAPES)
 
@@ -35,10 +37,13 @@ SET(LIBRARY_OUTPUT_PATH ${SHAPES_BINARY_DIR}/lib CACHE INTERNAL "Single output d
 
 # Set the compiler flags.
 IF("${CMAKE_BUILD_TYPE}" STREQUAL "Debug")
-    SET(CMAKE_CXX_FLAGS "-O0 -g -Wall -DCOMMIT=${GIT_COMMIT} -DBRANCH=${GIT_BRANCH}")
+    SET(CMAKE_CXX_FLAGS "-O0 -g -Wall")
 ELSEIF("${CMAKE_BUILD_TYPE}" STREQUAL "Release")
-    SET(CMAKE_CXX_FLAGS "-O3 -DNDEBUG -DCOMMIT=${GIT_COMMIT} -DBRANCH=${GIT_BRANCH}")
+    SET(CMAKE_CXX_FLAGS "-O3 -DNDEBUG")
 ENDIF()
+
+ADD_DEFINITIONS(-DCOMMIT="${GIT_COMMIT}")
+ADD_DEFINITIONS(-DBRANCH="${GIT_BRANCH}")
 
 # Output some useful info.
 SITE_NAME(COMPUTER_NAME)
