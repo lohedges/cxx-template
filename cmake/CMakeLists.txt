@@ -1,4 +1,4 @@
-CMAKE_MINIMUM_REQUIRED(VERSION 2.4)
+CMAKE_MINIMUM_REQUIRED(VERSION 3.2)
 IF(COMMAND cmake_policy)
     CMAKE_POLICY(SET CMP0003 NEW)
 ENDIF(COMMAND cmake_policy)
@@ -7,19 +7,14 @@ ENDIF(COMMAND cmake_policy)
 IF(DEFINED CMAKE_BUILD_TYPE)
    SET(CMAKE_BUILD_TYPE ${CMAKE_BUILD_TYPE} CACHE STRING "Choose the type of
 build, options are: None(CMAKE_CXX_FLAGS or CMAKE_C_FLAGS used) Debug
-Release RelWithDebInfo MinSizeRel.")
+Release RelWithDebInfo MinSizeRel." FORCE)
 ELSE()
     SET(CMAKE_BUILD_TYPE Release CACHE STRING "Choose the type of build,
 options are: None(CMAKE_CXX_FLAGS or CMAKE_C_FLAGS used) Debug Release
-RelWithDebInfo MinSizeRel.")
+RelWithDebInfo MinSizeRel." FORCE)
 ENDIF()
 
 PROJECT(SHAPES)
-
-# Output some useful info.
-SITE_NAME(COMPUTER_NAME)
-MESSAGE(STATUS "Computer name: " \"${COMPUTER_NAME}\")
-MESSAGE(STATUS "Build type: " \"${CMAKE_BUILD_TYPE}\")
 
 # Set paths.
 SET(EXECUTABLE_OUTPUT_PATH ${SHAPES_BINARY_DIR}/bin CACHE INTERNAL "Single output directory for executables.")
@@ -32,7 +27,10 @@ ELSEIF("${CMAKE_BUILD_TYPE}" STREQUAL "Release")
     SET(CMAKE_CXX_FLAGS "-O3 -DNDEBUG")
 ENDIF()
 
-# Print compiler flags.
+# Output some useful info.
+SITE_NAME(COMPUTER_NAME)
+MESSAGE(STATUS "Computer name: " \"${COMPUTER_NAME}\")
+MESSAGE(STATUS "Build type: " \"${CMAKE_BUILD_TYPE}\")
 MESSAGE(STATUS "Compiler flags: " \"${CMAKE_CXX_FLAGS}\")
 
 # Search for Doxygen, add dox subdirectory if found.
