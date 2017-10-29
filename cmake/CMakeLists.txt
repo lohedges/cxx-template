@@ -31,8 +31,7 @@ EXECUTE_PROCESS(
 
 PROJECT(SHAPES)
 
-# Set paths.
-SET(EXECUTABLE_OUTPUT_PATH ${SHAPES_BINARY_DIR}/bin CACHE INTERNAL "Single output directory for executables.")
+# Set library path.
 SET(LIBRARY_OUTPUT_PATH ${SHAPES_BINARY_DIR}/lib CACHE INTERNAL "Single output directory for libraries.")
 
 # Set the compiler flags.
