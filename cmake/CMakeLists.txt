@@ -95,7 +95,7 @@ CONFIGURE_FILE(
 ADD_CUSTOM_TARGET(uninstall
     COMMAND ${CMAKE_COMMAND} -P ${CMAKE_SOURCE_DIR}/uninstall.cmake)
 
-# Set the test code path.
+# Generate a list of test source files.
 FILE(GLOB TESTS RELATIVE ${CMAKE_SOURCE_DIR} ${CMAKE_SOURCE_DIR}/tests/*.cpp)
 
 # Build tests.
@@ -111,7 +111,7 @@ FOREACH(TEST ${TESTS})
 	)
 ENDFOREACH(TEST ${TESTS})
 
-# Set the demo code path.
+# Generate a list of demo source files.
 FILE(GLOB DEMOS RELATIVE ${CMAKE_SOURCE_DIR} ${CMAKE_SOURCE_DIR}/demos/*.cpp)
 
 # Build demos.
