@@ -37,7 +37,7 @@ cmake .
 ```
 
 Be warned that if you use make as your cmake generator then the original
-Makefile will be overwritten. To recover it simply run `git co Makefile`
+Makefile will be overwritten. To recover it simply run `git checkout Makefile`
 
 ## Targets
 * help&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->  print help message

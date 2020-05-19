@@ -185,7 +185,8 @@ help:
 	@echo " cmake ."
 	@echo
 	@echo " Be warned that if you use make as your cmake generator then the original"
-	@echo " Makefile will be overwritten. To recover it simply run: git co Makefile"
+	@echo " Makefile will be overwritten. To recover it simply run:"
+	@echo " git checkout Makefile"
 	@echo
 	$(call boldcolorecho, 4, "Targets")
 	@echo " help       -->  print this help message"
